@@ -1,14 +1,7 @@
 = simple_form_for(@corporation) do |f|
-  - if @corporation.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@corporation.errors.count, "error")
-        prohibited this corporation from being saved:
-      %ul
-        - @corporation.errors.full_messages.each do |msg|
-          %li= msg
-  = f.input :name
-  = f.input :shares
-  = f.input :par_value
-  = f.input :incorporation_date
+  = f.error_notification
+  = f.input :name, label: "What is the name of the new corporation?"
+  = f.input :shares, label: "How many shares will the new corporation have?"
+  = f.input :par_value, label: "What will be the par value of the new corporation's shares?"
+  = f.input :filing_date, as: :date, start_year: Date.today.year, label: "What will be the date of incorporation?"
   = f.button :submit, class: "btn btn-primary"

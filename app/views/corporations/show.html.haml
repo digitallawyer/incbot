@@ -18,13 +18,13 @@
   4. The total number of shares of stock which this corporation is authorized to issue is 
   %strong
     = @corporation.shares
-  , par value $
+  with a par value of
   %strong
+    $
     = @corporation.par_value
   per share.
 %p
-  5. The powers, preferences and rights and the qualifications, limitations or restrictions
-thereof shall be determined by the board of directors.
+  5. The powers, preferences and rights and the qualifications, limitations or restrictions thereof shall be determined by the board of directors.
 
 %p
   6. The name and address of hte incorporator is Lextronica, Inc., 395 Page Mill Rd., 94306 Palo Alto, CA.
@@ -33,11 +33,11 @@ thereof shall be determined by the board of directors.
 %p 
   8. No director shall be personally liable to the Corporation or its stockholders for monetary damages for any breach of fiduciary duty by such director as a director. Notwithstanding the foregoing sentence, a director shall be liable to the extent provided by applicable law, (i) for breach of the director's duty of loyalty to the Corporation or its stockholders, (ii) for acts or omissions not in good faith or which involve intentional misconduct or a knowing violation of law, (iii) pursuant to Section 174 of the Delaware General Corporation Law or (iv) for any transaction from which the director derived an improper personal benefit. No amendment to or repeal of this Article Eighth shall apply to or have any effect on the liability or alleged liability of any director of the Corporation for or with respect to any acts or omissions of such director occurring prior to such amendment.
 %p
-  IN WITNESS WHEREOF, the undersigned, being the incorporator herein before named, has executed signed and acknowledged this certificate of incorporation this
-
-%p
-  %b Incorporation date:
-  = @corporation.incorporation_date
+  IN WITNESS WHEREOF, the undersigned, being the incorporator herein before named, has executed signed and acknowledged this certificate of incorporation on 
+  = @corporation.filing_date.strftime("%B")
+  = @corporation.filing_date.strftime("%d")
+  of the year
+  = @corporation.filing_date.strftime("%Y")
 
 = link_to 'Edit', edit_corporation_path(@corporation) 
 |
