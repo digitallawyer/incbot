@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @corporation.name %>
+</p>
+
+<p>
+  <b>Shares:</b>
+  <%= @corporation.shares %>
+</p>
+
+<p>
+  <b>Par value:</b>
+  <%= @corporation.par_value %>
+</p>
+
+<p>
+  <b>Incorporation date:</b>
+  <%= @corporation.incorporation_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_corporation_path(@corporation) %> |
+<%= link_to 'Back', corporations_path %>

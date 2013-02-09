@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  shares: MyString
+  par_value: MyString
+  incorporation_date: MyString
+
+two:
+  name: MyString
+  shares: MyString
+  par_value: MyString
+  incorporation_date: MyString
