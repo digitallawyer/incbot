@@ -21,7 +21,10 @@ class CorporationsController < ApplicationController
       format.pdf do
         pdf = Prawn::Document.new
         pdf.text "Hello World"
-        send_data pdf.render   
+        send_data pdf.render, filename: "corporation_#{@corporation.name}.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+
     end
   end
 end
