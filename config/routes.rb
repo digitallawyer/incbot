@@ -1,5 +1,8 @@
 Incbot::Application.routes.draw do
   resources :corporations
+  root :to => 'corporations#index'
+
+
 
 
   # The priority is based upon order of creation:
