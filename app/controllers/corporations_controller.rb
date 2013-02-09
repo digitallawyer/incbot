@@ -18,8 +18,13 @@ class CorporationsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @corporation }
+      format.pdf do
+        pdf = Prawn::Document.new
+        pdf.text "Hello World"
+        send_data pdf.render   
     end
   end
+end
 
   # GET /corporations/new
   # GET /corporations/new.json
