@@ -4,7 +4,7 @@ class CreateCorporations < ActiveRecord::Migration
       t.string :name
       t.string :shares
       t.string :par_value
-      t.string :incorporation_date
+      t.string :filing_date
 
       t.timestamps
     end
