@@ -14,20 +14,17 @@ class CorporationsController < ApplicationController
   # GET /corporations/1.json
   def show
     @corporation = Corporation.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @corporation }
       format.pdf do
-        pdf = Prawn::Document.new
-        pdf.text "Hello World"
-        send_data pdf.render, filename: "corporation_#{@corporation.name}.pdf",
-                              type: "application/pdf",
+        pdf = CertificatePdf.new
+        send_data pdf.render, type: "application/pdf", 
                               disposition: "inline"
 
+      end
     end
   end
-end
 
   # GET /corporations/new
   # GET /corporations/new.json

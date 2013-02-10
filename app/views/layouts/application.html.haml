@@ -9,11 +9,9 @@
     %header.navbar.navbar-fixed-top.navbar-inverse
       .navbar-inner
         .container
-          %li.logo
+          .logo
             = link_to image_tag("incbot.png", size: "25x25"), '#', id: "logo"
           %ul.nav.pull-right
-            %li= link_to "Home",    '#'
-            %li= link_to "Help",    '#'
             %li= link_to "Sign in", '#'
     .container
       = yield
