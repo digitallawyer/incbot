@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title Incbot
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %header.navbar.navbar-fixed-top.navbar-inverse
+      .navbar-inner
+        .container
+          %li.logo
+            = link_to image_tag("incbot.png", size: "25x25"), '#', id: "logo"
+          %ul.nav.pull-right
+            %li= link_to "Home",    '#'
+            %li= link_to "Help",    '#'
+            %li= link_to "Sign in", '#'
+    .container
+      = yield

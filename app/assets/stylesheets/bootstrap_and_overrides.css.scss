@@ -1,7 +1,13 @@
 @import "bootstrap";
-body { padding: 60px; }
+body { padding-top: 60px; }
 @import "bootstrap-responsive";
 
 .center {
     text-align: center;
+}
+
+.logo {
+	margin-top: 5px;
+	margin-bottom: 0px;
+	float: left
 }
