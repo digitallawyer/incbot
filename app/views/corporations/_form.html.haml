@@ -5,11 +5,11 @@
   %br
   = f.input :name, label: "Enter the name of the new corporation"
   %br
-  %h5 2. Shares
+  %h5 2. Authorized shares
   %br
-  = f.input :shares, :input_html { :value => '10' }, label: "How many shares will the new corporation have?"
+  = f.input :shares, input_html: { :value => '10,000,000' }, label: "How many shares will the company have?"
   %br
-  = f.input :par_value, label: "What will be the par value of the new corporation's shares?"
+  = f.input :par_value, input_html: { :value => '0.000001' }, label: "What will be the par value of the company's shares?"
   %br
   %h5 3. Date of incorporation
   %br
