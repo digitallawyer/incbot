@@ -1,4 +1,8 @@
-%h1 Your corporations
+.row
+  .span8
+    %h4 Welcome to IncBot. 
+  .span4
+    = link_to 'New Incorporation', new_corporation_path, :class => "btn btn-primary btn-large pull-right"
 %hr
 .row
   .span2
@@ -32,4 +36,3 @@
   %hr
 
 %br/
-= link_to 'New Corporation', new_corporation_path, :class => "btn"
