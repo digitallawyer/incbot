@@ -8,11 +8,11 @@ gem 'bootstrap-sass'
 
 group :production do
   gem 'pg', '0.12.2'
-  gem 'better_errors'
 end
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
+  gem 'better_errors'
 end
 
 

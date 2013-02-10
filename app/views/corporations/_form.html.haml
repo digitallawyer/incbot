@@ -7,7 +7,7 @@
   %br
   %h5 2. Shares
   %br
-  = f.input :shares, label: "How many shares will the new corporation have?"
+  = f.input :shares, :input_html { :value => '10' }, label: "How many shares will the new corporation have?"
   %br
   = f.input :par_value, label: "What will be the par value of the new corporation's shares?"
   %br
