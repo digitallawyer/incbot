@@ -18,7 +18,7 @@ class CorporationsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @corporation }
       format.pdf do
-        pdf = CertificatePdf.new
+        pdf = CertificatePdf.new(@corporation)
         send_data pdf.render, type: "application/pdf", 
                               disposition: "inline"
 

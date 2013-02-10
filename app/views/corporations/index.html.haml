@@ -1,4 +1,4 @@
-%h1 Listing corporations
+%h1 Your corporations
 %hr
 .row
   .span2
@@ -9,6 +9,8 @@
     %strong Par Value
   .span3
     %strong Incorporation date
+
+%hr
 
 
 - @corporations.each do |corporation|
@@ -27,6 +29,7 @@
       %P= link_to 'Edit', edit_corporation_path(corporation)
     .span1
       %P= link_to 'Destroy', corporation, method: :delete, data: { confirm: 'Are you sure?' }
+  %hr
 
 %br/
 = link_to 'New Corporation', new_corporation_path, :class => "btn"
