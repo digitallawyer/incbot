@@ -1,8 +1,7 @@
-%p#notice= notice
 .row
   .span8
-    %h4 Review and submit
-    #{link_to 'Or download the certificate as a pdf', corporation_path(@corporation, format: "pdf")}
+    %h4 Documents generated! Proceed to checkout to complete the filing.
+    #{link_to 'You can also download the certificate as a pdf', corporation_path(@corporation, format: "pdf")}
   .span4
     = link_to 'Proceed to checkout', '#', :class => "btn btn-primary btn-large pull-right"
 
