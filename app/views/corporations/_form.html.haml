@@ -13,14 +13,14 @@
   %br
   %h5 3. Incorporator
   %br
-  = f.input :incorporator_name
-  = f.input :incorporator_street
-  = f.input :incorporator_zip
-  = f.input :incorporator_city
-  = f.input :incorporator_state
-  = f.input :incorporator_country
+  = f.input :incorporator_name, label: "Who is the person incorporating this company?", placeholder: "Incorporator name"
+  = f.input :incorporator_street, label: false, placeholder: "Street and housenumber"
+  = f.input :incorporator_zip, label: false, placeholder: "Zip code"
+  = f.input :incorporator_city, label: false, placeholder: "City"
+  = f.input :incorporator_state, label: false, placeholder: "State"
+  = f.input :incorporator_country, label: false, :priority => [ "United States" ]
   %br
-  %h5 3. Incorporation date
+  %h5 4. Incorporation date
   %br
   = f.input :filing_date, start_year: Date.today.year, label: "What will be the date of incorporation?", :input_html => {:style => 'width: 115px'}
   %br

@@ -9,7 +9,7 @@ class CertificatePdf < Prawn::Document
 	font_size 12
     text "1. The name of the corporation shall be #{@corporation.name}"
 	move_down 12
-   	text "2. Its registered office in the State of Delaware is located at Registered Agent Street, In the city of Registered Agent City, County of County, Zip Code 00000 and its Registered Agent at such address is Registered Agent Name."
+   	text "2. Its registered office in the State of Delaware is located at 1521 Concord Pike STE 303, In the city of Wilmington, DE 19803 and its Registered Agent at such address is A Registered Agent, Inc."
    	move_down 12
 	text "3. The purpose of the corporation shall be to carry on any and all business and to engage in any lawful act or activity for which corporations may be organized under the General Corporation Law of Delaware."
 	move_down 12
@@ -17,7 +17,7 @@ class CertificatePdf < Prawn::Document
 	move_down 12
 	text "5. The powers, preferences and rights and the qualifications, limitations or restrictions thereof shall be determined by the board of directors."
 	move_down 12
-	text "6. The name and address of the incorporator is Lextronica, Inc., 395 Page Mill Rd., 94306 Palo Alto, CA."
+	text "6. The name and address of the incorporator is #{@corporation.incorporator_name}, located at #{@corporation.incorporator_street}, #{@corporation.incorporator_zip}, #{@corporation.incorporator_city}, #{@corporation.incorporator_state}, #{@corporation.incorporator_country}."
 	move_down 12
 	text "7. The Board of Directors shall have the power to adopt, amend or repeal by by-laws."
 	move_down 12
