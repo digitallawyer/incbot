@@ -7,14 +7,23 @@
   %br
   %h5 2. Authorized shares
   %br
-  = f.input :shares, input_html: { :value => '10,000,000' }, label: "How many shares will the company have?"
+  = f.input :shares, input_html: { :value => '10,000,000' }, label: "How many shares will the corporation have?"
   %br
-  = f.input :par_value, input_html: { :value => '0.000001' }, label: "What will be the par value of the company's shares?"
+  = f.input :par_value, input_html: { :value => '0.000001' }, label: "What will be the par value of these shares?"
   %br
-  %h5 3. Date of incorporation
+  %h5 3. Incorporator
+  %br
+  = f.input :incorporator_name
+  = f.input :incorporator_street
+  = f.input :incorporator_zip
+  = f.input :incorporator_city
+  = f.input :incorporator_state
+  = f.input :incorporator_country
+  %br
+  %h5 3. Incorporation date
   %br
   = f.input :filing_date, start_year: Date.today.year, label: "What will be the date of incorporation?", :input_html => {:style => 'width: 115px'}
   %br
   %br
-
   = f.button :submit, "Generate Documents", class: "btn btn-primary btn-large"
+  -# The incorporation date should be set as a result of the completion of the filing.

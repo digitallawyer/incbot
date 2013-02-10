@@ -38,6 +38,8 @@ gem "prawn"
 
 gem "heroku"
 
+gem 'country_select'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
