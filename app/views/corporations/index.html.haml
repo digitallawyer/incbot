@@ -11,7 +11,7 @@
     %strong Shares
   .span2
     %strong Par Value
-  .span3
+  .span2
     %strong Incorporation date
 
 %hr
@@ -25,9 +25,9 @@
       %P= corporation.shares
     .span2
       %P= corporation.par_value
-    .span3
+    .span2
       %P= corporation.filing_date
-    .span1
+    .span1.offset1
       %P= link_to 'View', corporation, :class => "btn btn-small"
     .span1
       %P= link_to 'Edit', edit_corporation_path(corporation), :class => "btn btn-small"
