@@ -1,6 +1,6 @@
 .row
   .span8
-    %h4 Welcome to IncBot. 
+    %h4 Welcome to IncBot
   .span4
     = link_to 'New Incorporation', new_corporation_path, :class => "btn btn-primary btn-large pull-right"
 %hr
@@ -28,11 +28,11 @@
     .span3
       %P= corporation.filing_date
     .span1
-      %P= link_to 'Show', corporation
+      %P= link_to 'View', corporation, :class => "btn btn-small"
     .span1
-      %P= link_to 'Edit', edit_corporation_path(corporation)
+      %P= link_to 'Edit', edit_corporation_path(corporation), :class => "btn btn-small"
     .span1
-      %P= link_to 'Destroy', corporation, method: :delete, data: { confirm: 'Are you sure?' }
+      %P= link_to 'Delete', corporation, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-small btn-danger"
   %hr
 
 %br/
