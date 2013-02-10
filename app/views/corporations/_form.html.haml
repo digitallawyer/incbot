@@ -1,12 +1,20 @@
 = simple_form_for(@corporation) do |f|
-  %br
   = f.error_notification
-  = f.input :name, label: "What is the name of the new corporation?"
+  %hr
+  %h4 Company name
+  %br
+  = f.input :name, label: "Enter the name of the new corporation"
+  %br
+  %h4 Shares
   %br
   = f.input :shares, label: "How many shares will the new corporation have?"
   %br
   = f.input :par_value, label: "What will be the par value of the new corporation's shares?"
   %br
-  = f.input :filing_date, as: :date, start_year: Date.today.year, label: "What will be the date of incorporation?"
+  %h4 Date of incorporation
   %br
+  = f.input :filing_date, start_year: Date.today.year, label: "What will be the date of incorporation?", :input_html => {:style => 'width: 115px'}
+  %br
+  %br
+
   = f.button :submit, class: "btn btn-primary btn-large"
