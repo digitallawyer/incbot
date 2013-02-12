@@ -12,6 +12,23 @@
           .logo
             = link_to image_tag("incbot.png", size: "25x25"), '/corporations#show', id: "logo"
           %ul.nav.pull-right
-            %li= link_to "Sign in", '#'
+            - if user_signed_in?
+              %li= link_to 'Edit profile', edit_user_registration_path
+              %li
+                \#{link_to "Logout", destroy_user_session_path, method: :delete}
+            - else
+              %li= link_to "Sign up", new_user_registration_path
+              %li
+                \#{link_to "Login", new_user_session_path}
     .container
+      - if flash.alert
+        .alert-container
+          .alert.alert-error.fade.in{:'data-alert' => "alert"}
+            = flash.alert
+            %button.close{data: {dismiss: 'alert'}} ×
+      - if flash.notice
+        .alert-container
+          .alert.alert-success.fade.in{:'data-alert' => "alert"}
+            = flash.notice
+            %button.close{data: {dismiss: 'alert'}} ×
       = yield
