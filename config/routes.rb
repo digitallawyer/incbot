@@ -6,8 +6,7 @@ Incbot::Application.routes.draw do
   devise_for :users
 
   resources :corporations
-  root :to => 'corporations#index'
-
+  root :to => 'pages#home'
 
 
 

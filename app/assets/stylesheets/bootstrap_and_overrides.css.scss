@@ -1,6 +1,7 @@
 @import "bootstrap";
 body { padding-top: 60px; }
 @import "bootstrap-responsive";
+@import "font-awesome";
 
 .center {
     text-align: center;
@@ -19,4 +20,12 @@ body { padding-top: 60px; }
 .error {
 	margin-left: 5px;
 	color: red;
+}
+
+.home {
+	margin-top: 30px;
+}
+
+.video {
+	min-height: 600px;
 }
