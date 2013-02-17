@@ -1,2 +1,5 @@
-= render 'form'
-= link_to 'Back', corporations_path
+.row
+  = simple_form_for(@corporation) do |f|
+    = f.error_notification
+    = render "#{@corporation.current_step}_step", :f => f
+  -# The incorporation date should be set as a result of the completion of the filing.

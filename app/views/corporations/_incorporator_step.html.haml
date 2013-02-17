@@ -1,0 +1,21 @@
+.row
+  .span6
+    %h3 Incorporator
+    %br
+    = f.input :incorporator_name, :label => false, placeholder: "Incorporator name"
+    = f.input :incorporator_street, label: false, placeholder: "Street and housenumber"
+    = f.input :incorporator_zip, label: false, placeholder: "Zip code"
+    = f.input :incorporator_city, label: false, placeholder: "City"
+    = f.input :incorporator_state, label: false, placeholder: "State"
+    = f.input :incorporator_country, label: false, :priority => [ "United States" ]
+    %hr
+    %br
+    = f.button :submit, "Continue", class: "btn btn-primary btn-large"
+    = f.button :submit, "Go back", class: "btn btn-large btn-padding", :name => "back_button" unless @corporation.first_step?
+
+  .span6.guide
+    %h3 Guide
+    %br
+    %p
+      %strong Who is incorporating this company?
+    %p Provide the name and address of the person incorporating.

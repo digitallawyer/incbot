@@ -5,8 +5,12 @@ Incbot::Application.routes.draw do
 
   devise_for :users
 
-  resources :corporations
-  root :to => 'pages#home'
+  resources :corporations 
+  resources :pages
+  root :to => 'corporations#index'
+
+
+
 
 
 

@@ -1,38 +1,74 @@
-.row
-  .span8
-    %h4 Welcome to IncBot
-  .span4
-    = link_to 'New Incorporation', new_corporation_path, :class => "btn btn-primary btn-large pull-right"
-%hr
-.row
-  .span2
-    %strong Name
-  .span2
-    %strong Shares
-  .span2
-    %strong Incorporator
-  .span2
-    %strong Filed
+- unless user_signed_in?
+  .row
+    .span12.home 
+      %h2 Create and manage companies
+  .row.home
+    .span5
+      %br/
+      .row
+        .span1
+          %br/
+          %i.icon-file-alt.icon-4x
+        .span4
+          %h3 1. Prepare
+          %p Generate legal forms using IncBot
+      %br/
+      .row
+        .span1
+          %br/
+          %i.icon-search.icon-4x
+        .span4
+          %h3 2. Review
+          %p Ask a lawyer to review before filing
+      %br/
+      .row
+        .span1
+          %br/
+          %i.icon-exchange.icon-4x
+        .span4
+          %h3 3. File
+          %p Complete the filing from your desk
+      %br/
+      %br/
 
-%hr
+      = link_to 'Create a Delaware Corporation', new_corporation_path, :class => "btn btn-primary btn-large"
 
-
-- @corporations.each do |corporation|
+    .span7
+      %br/
+      .row
+        %iframe{:allowscriptaccess => "always", :allowfullscreen => "1", :frameborder => "0", :height => "400", :src => "http://www.youtube.com/embed/C0DPdy98e4c", :width => "650", :rel => "0", :loop => "1", :modestbranding => "1", :theme => "light", :title => "testing incbot"}
+- else
+  .row
+    .span8
+      %h4 Welcome to IncBot
+    .span4
+      = link_to 'New Incorporation', new_corporation_path, :class => "btn btn-primary btn-large pull-right"
+  %hr
   .row
     .span2
-      %p= corporation.name
+      %strong Name
     .span2
-      %P= corporation.shares
+      %strong Shares
     .span2
-      %P= corporation.incorporator_name
+      %strong Incorporator
     .span2
-      %P= corporation.filing_date
-    .span1.offset1
-      %P= link_to 'View', corporation, :class => "btn btn-small"
-    .span1
-      %P= link_to 'Edit', edit_corporation_path(corporation), :class => "btn btn-small"
-    .span1
-      %P= link_to 'Delete', corporation, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-small btn-danger"
+      %strong Filed
+
   %hr
 
-%br/
+  - @corporations.each do |corporation|
+    .row
+      .span2
+        %p= corporation.name
+      .span2
+        %P= corporation.shares
+      .span2
+        %P= corporation.incorporator_name
+      .span2
+        %P= corporation.filing_date
+      .span1.offset2
+        %P= link_to 'View', corporation, :class => "btn btn-small"
+      .span1
+        %P= link_to 'Delete', corporation, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-small btn-danger"
+    %hr
+  %br/

@@ -1,0 +1,16 @@
+.row
+  .span6
+    %h3 Corporation name
+    %br
+    = f.input :name, :label => false
+    %hr
+    %br
+    = f.button :submit, "Continue", class: "btn btn-primary btn-large"
+    = f.button :submit, "Back", class: "btn btn-large", :name => "back_button" unless @corporation.first_step?
+  .span6.guide
+    %h3 Guide
+    %br
+    %p
+      %strong What is the name of this new entity?
+    %p Delaware requires a unique name for each company it registers.
+    %p Third party trademarks may restrict the freedom to choose a name.

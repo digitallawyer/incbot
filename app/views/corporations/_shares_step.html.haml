@@ -1,0 +1,17 @@
+.row
+  .span6
+    %h3 Shares
+    %h5 Authorized shares
+    = f.input :shares, :label => false
+    %h5 Par value
+    = f.input :par_value, :label => false
+    %hr
+    %br
+    = f.button :submit, "Continue", class: "btn-primary btn-large"
+    = f.button :submit, "Go back", class: "btn-large btn-padding", :name => "back_button" unless @corporation.first_step?
+  .span6.guide
+    %h3 Guide
+    %h5 How many shares can the company issue?
+    %p The number of authorized shares determines the maximum number of shares of stock that a company can issue. This can be amended with the necessary approvals.
+    %h5 What is the value of these shares?
+    %p The par value is the nominal value of the authorized shares as determined by the issuing company to be its minimum price. Fingers crossed it goes up!

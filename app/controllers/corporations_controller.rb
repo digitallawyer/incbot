@@ -30,7 +30,9 @@ class CorporationsController < ApplicationController
   # GET /corporations/new
   # GET /corporations/new.json
   def new
-    @corporation = Corporation.new
+    session[:corporation_params] ||= {}
+    @corporation = Corporation.new(session[:corporation_params])
+    @corporation.current_step = session[:corporation_step]
 
     respond_to do |format|
       format.html # new.html.erb
@@ -46,16 +48,29 @@ class CorporationsController < ApplicationController
   # POST /corporations
   # POST /corporations.json
   def create
-    @corporation = Corporation.new(params[:corporation])
-
-    respond_to do |format|
-      if @corporation.save
-        format.html { redirect_to @corporation, notice: 'Corporation was successfully created.' }
-        format.json { render json: @corporation, status: :created, location: @corporation }
+    
+    session[:corporation_params].deep_merge!(params[:corporation]) if params[:corporation]
+    @corporation = Corporation.new(session[:corporation_params])
+    @corporation.current_step = session[:corporation_step]
+    if @corporation.valid?
+      if params[:back_button]
+        @corporation.previous_step
+      
+      elsif @corporation.last_step?
+        @corporation.save
+      
       else
-        format.html { render action: "new" }
-        format.json { render json: @corporation.errors, status: :unprocessable_entity }
+        @corporation.next_step         
       end
+
+      session[:corporation_step] = @corporation.current_step
+      end   
+    if @corporation.new_record?
+      render 'new'     
+
+    else
+      session[:corporation_step] = session[:corporation_params] = nil
+      redirect_to @corporation
     end
   end
 
