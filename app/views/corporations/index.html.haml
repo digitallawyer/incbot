@@ -1,7 +1,8 @@
 - unless user_signed_in?
   .row
     .span12.home 
-      %h2 Create and manage companies
+      %br
+      %h2 Automated incorporation
   .row.home
     .span5
       %br/
@@ -33,10 +34,6 @@
 
       = link_to 'Create a Delaware Corporation', new_corporation_path, :class => "btn btn-primary btn-large"
 
-    .span7
-      %br/
-      .row
-        %iframe{:allowscriptaccess => "always", :allowfullscreen => "1", :frameborder => "0", :height => "400", :src => "http://www.youtube.com/embed/C0DPdy98e4c", :width => "650", :rel => "0", :loop => "1", :modestbranding => "1", :theme => "light", :title => "testing incbot"}
 - else
   .row
     .span8

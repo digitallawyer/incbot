@@ -75,8 +75,9 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fastercsv (1.5.5)
-    font-awesome-rails (3.0.2.0)
-      railties (>= 3.1)
+    font-awesome-sass-rails (3.0.2.1)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
     formtastic (2.2.1)
       actionpack (>= 3.0)
     haml (3.1.7)
@@ -204,7 +205,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   country_select
   devise
-  font-awesome-rails
+  font-awesome-sass-rails
   haml-rails
   heroku
   jquery-rails
