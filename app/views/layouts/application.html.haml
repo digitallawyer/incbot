@@ -11,7 +11,6 @@
         .container
           .logo
             = link_to image_tag("incbot.png", size: "25x25"), corporations_path, id: "logo"
-
           %ul.nav.pull-right
             - if user_signed_in?
               %li= link_to 'Edit profile', edit_user_registration_path

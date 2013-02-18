@@ -1,38 +1,5 @@
 - unless user_signed_in?
-  .row
-    .span12.home 
-      %br
-      %h2 Automated incorporation
-  .row.home
-    .span5
-      %br/
-      .row
-        .span1
-          %br/
-          %i.icon-file-alt.icon-4x
-        .span4
-          %h3 1. Prepare
-          %p Generate legal forms using IncBot
-      %br/
-      .row
-        .span1
-          %br/
-          %i.icon-search.icon-4x
-        .span4
-          %h3 2. Review
-          %p Ask a lawyer to review before filing
-      %br/
-      .row
-        .span1
-          %br/
-          %i.icon-exchange.icon-4x
-        .span4
-          %h3 3. File
-          %p Complete the filing from your desk
-      %br/
-      %br/
-
-      = link_to 'Create a Delaware Corporation', new_corporation_path, :class => "btn btn-primary btn-large"
+  = render 'welcome'
 
 - else
   .row
