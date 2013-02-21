@@ -3,7 +3,12 @@ class CorporationsController < ApplicationController
   # GET /corporations
   # GET /corporations.json
   def index
-    @corporations = Corporation.all
+    unless user_signed_in?
+      @corporations = Corporation.all
+    else
+      @user = current_user
+      @corporations = @user.corporations
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -48,7 +53,6 @@ class CorporationsController < ApplicationController
   # POST /corporations
   # POST /corporations.json
   def create
-    
     session[:corporation_params].deep_merge!(params[:corporation]) if params[:corporation]
     @corporation = Corporation.new(session[:corporation_params])
     @corporation.current_step = session[:corporation_step]

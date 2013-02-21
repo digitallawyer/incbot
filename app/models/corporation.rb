@@ -1,4 +1,6 @@
 class Corporation < ActiveRecord::Base
+
+  belongs_to :user
   
   attr_accessible :filing_date, 
         				  :name, 
@@ -9,7 +11,8 @@ class Corporation < ActiveRecord::Base
         				  :incorporator_zip,
         				  :incorporator_city,
         				  :incorporator_state,
-        				  :incorporator_country
+        				  :incorporator_country,
+                  :user_id
 
   attr_writer :current_step
 
