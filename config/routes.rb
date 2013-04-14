@@ -1,13 +1,13 @@
 Incbot::Application.routes.draw do
+  root :to => 'pages#home'
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
-
   devise_for :users
 
   resources :corporations 
   resources :pages
-  root :to => 'pages#home'
+  
 
 
 
