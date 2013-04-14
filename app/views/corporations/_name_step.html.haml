@@ -4,7 +4,10 @@
     %strong What is the name of this new corporation?
     %p The Delaware Secretary of State requires a unique company name. Stay clear of names protected by trademark or other rights.
     %br
-    = f.input :name, :label => false
+    = f.input :name, :label => false, :wrappers => :append, :class => "inline" do
+      = f.input_field :name
+      %strong , Inc.
+
     = f.hidden_field :user_id, :value => current_user.id
     %br
     = f.button :submit, "Continue", class: "btn btn-primary btn-large"

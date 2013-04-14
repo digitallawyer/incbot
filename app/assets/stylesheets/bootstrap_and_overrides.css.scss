@@ -26,6 +26,20 @@ body {
 
 }
 
+h1.jumbotron  {
+font-size: 5em;
+line-height: 1;
+}
+
+.jumbicon  {
+font-size: 120px;
+}
+
+h3.grey {
+color: #ababab;
+}
+
+
 .logotext {
 	margin-left: 10px;
 	margin-top: 10px;
@@ -35,6 +49,15 @@ body {
 	color: white;
 	font-size: 1.2em
 }
+
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 32px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }
 
 .floatr {
 	float: right;
@@ -47,10 +70,6 @@ body {
 
 .home {
 	margin-top: 30px;
-}
-
-.video {
-	min-height: 600px;
 }
 
 .guide {
