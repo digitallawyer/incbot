@@ -2,12 +2,8 @@
   = render 'welcome'
 
 - else
-  .row
-    .span8
-      %h4 Welcome to IncBot
-    .span4
-      = link_to 'New Incorporation', new_corporation_path, :class => "btn btn-primary btn-large pull-right"
-  %hr
+  %h3 Your companies
+  %br
   .row
     .span2
       %strong Name
@@ -36,3 +32,5 @@
         %P= link_to 'Delete', corporation, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-small btn-danger"
     %hr
   %br/
+  
+  %h3 Recently incorporated componies
