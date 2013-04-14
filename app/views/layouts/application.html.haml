@@ -10,9 +10,9 @@
       .navbar-inner
         .container
           .logo
-            = link_to image_tag("incbot.png", size: "25x25"), corporations_path, id: "logo"
+            = link_to image_tag("incbot.png", size: "25x25"), root_path, id: "logo"
           .logotext
-            Incbot
+            = link_to "Incbot", root_path
           - if user_signed_in?
             = link_to '+ New Incorporation', new_corporation_path, :class => "btn btn-success"
           %ul.nav.pull-right
