@@ -20,7 +20,6 @@ end
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
   gem "haml-rails"
   gem "font-awesome-sass-rails"
 
@@ -31,6 +30,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+
+gem 'coffee-rails', '~> 3.2.1'
 gem 'jquery-rails'
 gem 'simple_form'
 
