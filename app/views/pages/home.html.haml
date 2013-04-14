@@ -1,39 +1,30 @@
+%br
+%br
 .row
-  .span12 
-    .well
-      %h1.center create and manage companies
-.row.home
-  .span5
-    %br/
+  .span6
+    %h3 How Incbot works
     .row
-      .span1
-        %br/
-        %i.icon-file-alt.icon-4x
       .span4
-        %h3 1. Prepare
+        %h3
+          %i.icon-file-alt.icon-1x
+          &nbsp&nbsp1. Prepare
         %p Generate legal forms using IncBot
-    %br/
-    .row
-      .span1
-        %br/
-        %i.icon-search.icon-4x
       .span4
-        %h3 2. Review
-        %p Ask a lawyer to review before filing
-    %br/
-    .row
-      .span1
-        %br/
-        %i.icon-exchange.icon-4x
+        %h3
+          %i.icon-search.icon-1x
+          &nbsp&nbsp2. Review
+        %p Ask a lawyer to review your filing
       .span4
-        %h3 3. File
-        %p Complete the filing from your desk
+        %h3
+          %i.icon-exchange.icon-1x
+          &nbsp&nbsp3. File
+        %p Complete the filing with a click
+    
+  .span6.pull-right
+    %h2 Incorporate and dissolve corporate entities online
     %br/
     %br/
-
-    = link_to 'Create a Delaware Corporation', new_corporation_path, :class => "btn btn-primary btn-large"
-
-  .span7
-    %br/
-    .row
-      %iframe{:allowscriptaccess => "always", :allowfullscreen => "1", :frameborder => "0", :height => "400", :src => "http://www.youtube.com/embed/C0DPdy98e4c", :width => "650", :rel => "0", :loop => "1", :modestbranding => "1", :theme => "light", :title => "testing incbot"}
+    = link_to 'Incorporate now', new_corporation_path, :class => "btn btn-warning btn-large"
+    %br
+    %br
+    %p Incbot is in beta and only creates Delaware Corporations for now.

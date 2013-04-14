@@ -1,7 +1,7 @@
 @import url('//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700');
 
 /*!
- * Bootstrap v2.3.1 Theme
+ * Bootstrap v2.3.1
  *
  * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
@@ -6545,80 +6545,3 @@ div.subnav-fixed {
 .affix {
   position: fixed;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-body { 
-	background: url('paper_fibers.png') repeat;
-	margin-top: 60px;
-}
-
-@import "bootstrap-responsive";
-@import "font-awesome";
-
-.center {
-    text-align: center;
-}
-
-.logo {
-	margin-top: 5px;
-	margin-bottom: 0px;
-	float: left;
-
-}
-
-.logotext {
-	margin-left: 10px;
-	margin-top: 10px;
-	margin-bottom: 0px;
-	margin-right: 40px;
-	float: left;
-	color: white;
-	font-size: 1.2em
-}
-
-.floatr {
-	float: right;
-}
-
-.error {
-	margin-left: 5px;
-	color: red;
-}
-
-.home {
-	margin-top: 30px;
-}
-
-.video {
-	min-height: 600px;
-}
-
-.guide {
-	color: grey
-}
-
-.btn-group .input:first-child {
-    border-bottom-left-radius: 4px;
-    border-top-left-radius: 4px;
-    margin-left: 0;
-}
-
-.btn-group .input {
-    float: left;
-    position: relative;
-}
-
-.btn-padding {
-	margin-left: 10px;
-}
-

@@ -7,7 +7,7 @@ Incbot::Application.routes.draw do
 
   resources :corporations 
   resources :pages
-  root :to => 'corporations#index'
+  root :to => 'pages#home'
 
 
 

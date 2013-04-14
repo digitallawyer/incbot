@@ -1,6 +1,15 @@
 .row
-  .span6
-    %h3 Filing date
-    = f.input :filing_date
+  .span12
+    %h3 Step 4 - Options
+    %h4 A. Filing date
+    %strong When will the company be incorporated?
+    %p You can choose to incorporate today or on a date in the future. 
+    %br
+    = f.input :filing_date, input_html: { width: 20 }, :label => false
+    %br
+    %h4 B. More options coming soon!   
+    %p Incbot is in beta and will be improved over time.
+    %br
     = f.button :submit, "Continue", class: "btn btn-primary btn-large"
     = f.button :submit, "Back", class: "btn btn-large btn-padding", :name => "back_button" unless @corporation.first_step?
+    

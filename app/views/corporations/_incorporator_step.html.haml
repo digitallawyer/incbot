@@ -1,21 +1,15 @@
 .row
-  .span6
-    %h3 Incorporator
+  .span12
+    %h3 Step 3 - Incorporator info
+    %strong Who is the incorporator?
+    %p This is the individual who signs the articles of incorporation and by doing so requests the state to bring the corporation into existence. The incorporator must be at least 18 years old.
     %br
-    = f.input :incorporator_name, :label => false, placeholder: "Incorporator name"
-    = f.input :incorporator_street, label: false, placeholder: "Street and housenumber"
+    = f.input :incorporator_name, :label => false, placeholder: "Name"
+    = f.input :incorporator_street, label: false, placeholder: "Address"
     = f.input :incorporator_zip, label: false, placeholder: "Zip code"
     = f.input :incorporator_city, label: false, placeholder: "City"
     = f.input :incorporator_state, label: false, placeholder: "State"
     = f.input :incorporator_country, label: false, :priority => [ "United States" ]
-    %hr
     %br
     = f.button :submit, "Continue", class: "btn btn-primary btn-large"
     = f.button :submit, "Go back", class: "btn btn-large btn-padding", :name => "back_button" unless @corporation.first_step?
-
-  .span6.guide
-    %h3 Guide
-    %br
-    %p
-      %strong Who is incorporating this company?
-    %p Provide the name and address of the person incorporating.

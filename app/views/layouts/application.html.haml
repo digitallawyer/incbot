@@ -11,6 +11,10 @@
         .container
           .logo
             = link_to image_tag("incbot.png", size: "25x25"), corporations_path, id: "logo"
+          .logotext
+            Incbot
+          - if user_signed_in?
+            = link_to '+ New Incorporation', new_corporation_path, :class => "btn btn-success"
           %ul.nav.pull-right
             - if user_signed_in?
               %li= link_to 'Edit profile', edit_user_registration_path
