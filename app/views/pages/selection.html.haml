@@ -1,3 +1,41 @@
+%br
+%br
+%h3 I want to incorporate in Delaware, United States of America. Help me create a:
+%br
+%br
 .row
-  .span12
-    %h3 I want to create a legal entity in the United States
+  .span3
+    %a{:href => new_corporation_path, :class => "nolines"}
+      .entitySelect
+        %h4.entitytext.big C Corporation
+        .entitytext.subtitle
+          %p Features
+        .entitytext.small
+          %p Liability protection
+          %p Can have multiple stock classes
+          %p Unlimited number of owners
+          %p Entity subject to income tax
+        .price $299 state fees
+  
+  .span3.entitySelect
+    = link_to "", {:controller => "corporations", :action => "create"}
+    %h4.entitytext.big S Corporation
+    .entitytext.subtitle
+      %p Features
+    .entitytext.small
+      %p Liability protection
+      %p Can only have one stock class
+      %p Maximum of 100 owners
+      %p Owners subject to income tax
+    .construction Not available yet
+  .span3.entitySelect
+    = link_to "", {:controller => "corporations", :action => "create"}
+    %h4.entitytext.big LLC
+    .entitytext.subtitle
+      %p Features
+    .entitytext.small
+      %p Liability protection
+      %p Can have multiple membership classes
+      %p Unlimited number of owners
+      %p Owners subject to income tax
+    .construction Not available yet

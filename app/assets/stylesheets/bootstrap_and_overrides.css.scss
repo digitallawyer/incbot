@@ -39,6 +39,82 @@ h3.grey {
 color: #ababab;
 }
 
+.entitySelect {
+  border-style:solid;
+	border-color: #34495E;
+	border-width: 2px;
+  background-color: #6a8dad;
+  width: 230px;
+  height: 280px;
+	display: block;
+	margin: 10px;
+  }
+
+.entitySelect:hover {
+  border-style:solid;
+  border-color: #34495E;
+	border-width: 2px;
+	background-color: #34495E;
+  width: 230px;
+  height: 280px;
+	display: block;
+  }
+
+.entitytext {
+  color: #ffffff;
+}
+
+a.nolines {
+  text-decoration: none;
+}
+
+.entitytext.small {
+  font-size:0.8em;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+  text-align: center;
+}
+
+.entitytext.subtitle {
+  font-size:1.2em;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+  text-align: center;
+	font-weight: bold;
+	
+}
+
+.entitytext.big {
+  font-size:1.8em;
+	margin-top: 40px;
+	margin-left: 20px;
+	margin-right: 20px;
+  text-align: center;
+	text-decoration: none;
+	
+}
+
+.price {
+  font-size:1.2em;
+	margin-top: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-weight: bold;
+	color: #FF8C00;
+	text-align: center;
+}
+
+.construction {
+  font-size:1.2em;
+	margin-top: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-weight: bold;
+	color: #B22222;
+	text-align: center;
+}
 
 .logotext {
 	margin-left: 10px;
@@ -90,4 +166,5 @@ color: #ababab;
 .btn-padding {
 	margin-left: 10px;
 }
+
 
