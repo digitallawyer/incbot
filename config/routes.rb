@@ -1,5 +1,7 @@
 Incbot::Application.routes.draw do
-  root :to => 'pages#home'
+  get 'pages/home'
+  get 'pages/selection'
+	root :to => 'pages#home'
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -7,10 +9,10 @@ Incbot::Application.routes.draw do
 
   resources :corporations 
   resources :pages
+	
+
+	
   
-
-
-
 
 
 
