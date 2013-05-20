@@ -2,7 +2,8 @@
 %br
 .row
   .span12.center
-    %h1.jumbotron Incorporate and dissolve corporate entities online
+    %h1.jumbotron IncBot
+    %h1 Incorporate and dissolve corporate entities online
     %br/
     %br/
     = link_to 'Incorporate now', new_corporation_path, :class => "btn btn-warning btn-xlarge"
@@ -21,15 +22,15 @@
     %br
     .row
       .span4.center
-        %i.icon-file-alt.jumbicon
+        = image_tag 'illustrations/clipboard.png', :width => "120px"
         %h1 Prepare
         %p Generate legal forms using IncBot
       .span4.center
-        %i.icon-search.jumbicon
+        = image_tag 'illustrations/retina.png', :width => "140px"
         %h1 Review
         %p Ask a lawyer to review your filing
       .span4.center
-        %i.icon-exchange.jumbicon
+        = image_tag 'illustrations/mail.png', :width => "130px"
         %h1 File
         %p Complete the filing with a click
     

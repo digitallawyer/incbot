@@ -16,11 +16,9 @@ class Corporation < ActiveRecord::Base
 
   attr_writer :current_step
 
-
   validates_presence_of :name, :if => :name?
   validates_presence_of :par_value, :if => :shares?
   validates_presence_of :shares, :if => :shares?
-
 
   def name?
     current_step == "name"
